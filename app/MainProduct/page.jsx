@@ -1,6 +1,6 @@
 'use client'
-import polka from '@/public/polka.jpg'
 import Image from 'next/image'
+import polka from '@/public/polka.jpg'
 const MainPage = () => {
 	const handeAddProduct = () => {}
 	const handeUnAddProduct = () => {}
