@@ -1,17 +1,13 @@
 import Elements from '../utilis/elements'
-import Footer from './Footer'
-import Header from './Header'
 import StorageSummary from './StorageSummary'
 const MainPage = () => {
 	return (
-		<div className='flex flex-col gap-4'>
-			<Header />
+		<div className='my-4'>
 			<div className='grid grid-cols-2 gap-2 mx-4'>
 				{Elements.map(element => (
-					<StorageSummary key={element.title} element={element} />
+					<StorageSummary key={`${element.done}-${element.done2}`} element={element} />
 				))}
 			</div>
-			<Footer />
 		</div>
 	)
 }

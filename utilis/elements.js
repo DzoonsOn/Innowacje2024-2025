@@ -1,14 +1,15 @@
-import BagSvg from '@/src/assets/BagSvg'
-import CalendarSvg from '@/src/assets/CalendarSvg'
-import CameraSvg from '@/src/assets/CameraSvg'
-import ClipboardSvg from '@/src/assets/ClipboardSvg'
-import PiSvg from '@/src/assets/PiSvg'
-import WarehouseSvg from '@/src/assets/WarehouseSvg'
+import BagSvg from '@/components/assets/BagSvg'
+import CalendarSvg from '@/components/assets/CalendarSvg'
+import CameraSvg from '@/components/assets/CameraSvg'
+import ClipboardSvg from '@/components/assets/ClipboardSvg'
+import PiSvg from '@/components/assets/PiSvg'
+import WarehouseSvg from '@/components/assets/WarehouseSvg'
+import '@/app/globals.css'
 
 const Elements = [
 	{
-		divColor: 'bg-blue-500',
-		colorCircle: 'bg-blue-600',
+		divColor: 'bg-orange-400',
+		colorCircle: 'bg-orange-300',
 		svg: <PiSvg />,
 		title: 'Dołożenia',
 		topicOne: 'Magazyn',
@@ -31,8 +32,8 @@ const Elements = [
 		content: 'Priorytetowe zgłoszenia serwisowe',
 	},
 	{
-		divColor: 'bg-orange-500',
-		colorCircle: 'bg-orange-600',
+		divColor: 'bg-lime-600',
+		colorCircle: 'bg-lime-800',
 		svg: <CalendarSvg />,
 		title: 'Zmiany Layoutów',
 		topicOne: 'Promocje',
@@ -43,8 +44,8 @@ const Elements = [
 		done2: 35,
 	},
 	{
-		divColor: 'bg-amber-500',
-		colorCircle: 'bg-amber-700',
+		divColor: 'bg-cyan-600',
+		colorCircle: 'bg-cyan-900',
 		svg: <PiSvg />,
 		title: 'Poprawność stoków',
 		topicOne: ' ',
@@ -66,8 +67,8 @@ const Elements = [
 		content: 'Monitorowanie jakości procesów',
 	},
 	{
-		divColor: 'bg-teal-500',
-		colorCircle: 'bg-teal-600',
+		divColor: 'bg-orange-400',
+		colorCircle: 'bg-orange-300',
 		svg: <WarehouseSvg />,
 		title: 'Zarządzanie Zapasami',
 		topicOne: 'Dostawy',
@@ -79,14 +80,14 @@ const Elements = [
 		content: 'Kontrola i uzupełnianie zapasów',
 	},
 	{
-		divColor: 'bg-purple-500',
-		colorCircle: 'bg-purple-600',
+		divColor: ' bg-purple-500 ',
+		colorCircle: ' bg-purple-600 ',
 		svg: <BagSvg />,
 		title: 'Etykiety i Elementy POS',
 	},
 	{
-		divColor: 'bg-green-500',
-		colorCircle: 'bg-green-600',
+		divColor: 'bg-green-500 ',
+		colorCircle: 'bg-green-600 ',
 		svg: <CameraSvg />,
 		href: 'MainProduct',
 		textXl: true,

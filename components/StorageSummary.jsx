@@ -11,7 +11,7 @@ const StorageSummary = ({ element }) => {
 	return (
 		<button
 			onClick={href ? goToNextPage : null}
-			className={`${divColor}  text-white rounded-lg p-4 shadow-md min-h-40 cursor-pointer`}>
+			className={` ${divColor} text-white rounded-lg p-4 shadow-md min-h-40 cursor-pointer`}>
 			<div className='flex items-start mb-4'>
 				<div className={`w-8 h-8 flex items-center justify-center ${colorCircle} rounded-full mr-4`}>{svg}</div>
 				<h2 className='text-md font-semibold'>{title}</h2>

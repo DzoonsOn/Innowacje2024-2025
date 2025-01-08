@@ -1,3 +1,4 @@
+import '@/app/globals.css'
 const Header = () => {
 	return (
 		<div className='rounded-lg w-full'>
