@@ -10,7 +10,7 @@ const MainPage = () => {
 	const stylesInfoDiv =
 		'w-full flex justify-center py-2 bg-gray-200 rounded-lg text-gray-800 font-semibold shadow-md hover:bg-gray-300'
 	return (
-		<div className=' mx-auto bg-white rounded-lg shadow-md p-4 border'>
+		<div className=' mx-auto bg-white rounded-lg shadow-md p-4 border my-2'>
 			<div className='pb-4 flex flex-col mx-auto lg:w-1/4 md:w-1/2'>
 				<h1 className='text-center text-xl text-black font-bold mb-1'>Hugo boss</h1>
 				<div className='h-0.5 bg-slate-600 self-stretch'></div>
