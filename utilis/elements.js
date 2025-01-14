@@ -89,7 +89,7 @@ const Elements = [
 		divColor: 'bg-green-500 ',
 		colorCircle: 'bg-green-600 ',
 		svg: <CameraSvg />,
-		href: 'MainProduct',
+		href: 'Categories',
 		textXl: true,
 		topicOne: 'Kamery',
 		taskNumber: 12,
