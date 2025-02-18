@@ -1,51 +1,31 @@
-'use client'
-import { useRouter } from 'next/navigation'
-import '@/components/style/Categories.css';
+import axios from 'axios'
+import '@/components/style/Categories.css'
+import CategoriesSection from '@/components/CategoriesSection'
 
-export default function Categories() {
-  const router = useRouter();
+const Categories = async () => {
+	let categories = []
 
-  const handleRedirect = (path) => {
-    router.push(path); 
-  };
+	try {
+		const response = await axios.get('http://localhost:5195/api/ProductShortages/categories')
+		categories = response?.data
+	} catch (e) {}
 
-  return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1 className="header">
-        <div>STS</div>
-        <div className="redDivStyle">Kamery</div>
-      </h1>
+	console.log(categories)
 
-      <div className="title">
-        <h2>Kategorie</h2>
-      </div>
+	return (
+		<div style={{ textAlign: 'center', padding: '20px' }}>
+			<h1 className='header'>
+				<div>STS</div>
+				<div className='redDivStyle'>Kamery</div>
+			</h1>
 
-      <div className="gridContainer">
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 1
-          <div className="redSquareStyle">5</div>
-        </button>
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 2
-          <div className="redSquareStyle">12</div>
-        </button>
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 3
-          <div className="redSquareStyle">3</div>
-        </button>
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 4
-          <div className="redSquareStyle">7</div>
-        </button>
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 5
-          <div className="redSquareStyle">9</div>
-        </button>
-        <button className="button" onClick={() => handleRedirect('MainProduct')}>
-          Kategoria 5
-          <div className="redSquareStyle">9</div>
-        </button>
-      </div>
-    </div>
-  );
+			<div className='title'>
+				<h2>Kategorie</h2>
+			</div>
+
+			<CategoriesSection categories={categories} />
+		</div>
+	)
 }
+
+export default Categories
