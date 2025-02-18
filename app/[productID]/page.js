@@ -4,14 +4,13 @@ import Product from '@/components/Product'
 const MainPage = async ({ params: { productID } }) => {
 	let product
 
-	if (!productID) return <p>No product ID provided</p>
-
 	try {
 		const response = await fetch(`http://localhost:5195/api/ProductShortages/${productID}`, {
 			cache: 'no-cache',
 		})
 
 		const productData = await response.json()
+		if (!productID) return null
 		product = productData
 	} catch (e) {}
 

@@ -18,7 +18,7 @@ const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumbe
 				<div className='h-0.5 bg-slate-600 self-stretch'></div>
 			</div>
 
-			<div className='relative w-full h-64 bg-green-300 mb-4'>
+			<div className='relative mx-auto lg:w-1/3 w-full lg:h-96 h-[330px] bg-green-300 mb-4'>
 				<Image src={ImagePath} alt='Detected Items' width={400} height={200} className='w-full h-full object-cover' />
 			</div>
 
@@ -31,10 +31,10 @@ const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumbe
 				</button>
 			</div>
 
-			<div className='flex flex-col space-y-3'>
-				<div className={stylesInfoDiv}>Półka {shelfNumber}</div>
-				<div className={stylesInfoDiv}>Numer od lewej {productNumber}</div>
+			<div className='flex flex-col space-y-3 lg:w-1/2 mx-auto'>
 				<div className={stylesInfoDiv}>Regał {shelfUnit}</div>
+				<div className={stylesInfoDiv}>Półka {shelfNumber}</div>
+				<div className={stylesInfoDiv}>Numer produktu od lewej {productNumber}</div>
 			</div>
 		</div>
 	)
