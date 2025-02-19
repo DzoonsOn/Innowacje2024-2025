@@ -21,6 +21,7 @@ const MainPage = async ({ params: { productID } }) => {
 			shelfUnit={product.shelfUnit}
 			shelfNumber={product.shelfNumber}
 			productNumber={product.productNumber}
+			productCategory={product.departmentId}
 		/>
 	)
 }
