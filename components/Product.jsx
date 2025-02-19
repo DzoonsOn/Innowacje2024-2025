@@ -1,6 +1,10 @@
 'use client'
 import Image from 'next/image'
-const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumber }) => {
+import { FaArrowLeft } from 'react-icons/fa';
+import Link from 'next/link';
+import './style/Categories.css';
+
+const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumber, productCategory}) => {
 	const handeAddProduct = () => {}
 	const handeUnAddProduct = () => {}
 
@@ -13,6 +17,9 @@ const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumbe
 
 	return (
 		<div className=' mx-auto bg-white rounded-lg shadow-md p-4 border my-2'>
+			<Link href={`/Categories/${productCategory}`}>
+				<FaArrowLeft className="arrowback" />
+			</Link>
 			<div className='pb-4 flex flex-col mx-auto lg:w-1/4 md:w-1/2'>
 				<h1 className='text-center text-xl text-black font-bold mb-1'>Product ID {shortageId}</h1>
 				<div className='h-0.5 bg-slate-600 self-stretch'></div>
@@ -24,7 +31,7 @@ const Product = ({ shortageId, productName, shelfUnit, shelfNumber, productNumbe
 
 			<div className='flex justify-center lg:gap-40 gap-14 mb-4'>
 				<button onClick={handeAddProduct} className={`${stylessAddButton} bg-red-500  hover:bg-red-800`}>
-					<p>Nie dodano</p>
+				<Link href={`/Categories/${productCategory}`}><p>Nie dodano</p></Link>
 				</button>
 				<button onClick={handeUnAddProduct} className={`${stylessAddButton} bg-green-500  hover:bg-green-800`}>
 					<p>&nbsp;&nbsp;Dodano&nbsp;&nbsp;</p>

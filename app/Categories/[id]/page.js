@@ -1,4 +1,6 @@
 import ProductsSection from '@/components/ProductSection'
+import Link from 'next/link';
+import { FaArrowLeft } from 'react-icons/fa';
 import '@/components/style/Categories.css'
 const CategoriesID = async ({ params: { id } }) => {
 	let products = []
@@ -26,6 +28,9 @@ const CategoriesID = async ({ params: { id } }) => {
 			</h1>
 
 			<div className='title'>
+				<Link href='/Categories' passHref>
+					<FaArrowLeft className="arrow" />
+				</Link>
 				<h2>Kategoria {category}</h2>
 			</div>
 

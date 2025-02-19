@@ -1,8 +1,13 @@
 import axios from 'axios'
 import '@/components/style/Categories.css'
 import CategoriesSection from '@/components/CategoriesSection'
+import { FaArrowLeft } from 'react-icons/fa';
+import Link from 'next/link';
+
+ 
 
 const Categories = async () => {
+
 	let categories = []
 
 	try {
@@ -20,7 +25,10 @@ const Categories = async () => {
 			</h1>
 
 			<div className='title'>
-				<h2>Kategorie</h2>
+				<Link href='/' passHref>
+					<FaArrowLeft className="arrow" />
+				</Link>
+				<h2>Kagorie</h2>
 			</div>
 
 			<CategoriesSection categories={categories} />
