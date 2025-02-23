@@ -97,8 +97,8 @@ const Elements = [
 		href: 'Categories',
 		textXl: true,
 		topicOne: 'Kamery',
-		taskNumber: 12,
-		done: 25,
+		taskNumber: 31,
+		done: 2,
 	},
 ]
 
